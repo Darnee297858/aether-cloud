@@ -44,8 +44,9 @@ export default function CloudScene() {
         <ambientLight intensity={0.8} />
         <directionalLight position={[3, 3, 3]} intensity={1.5} />
         <CloudCoreNode />
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.0} />
-      </Canvas>
+<OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.0} />
+</Canvas>
+
     </div>
   );
 }
