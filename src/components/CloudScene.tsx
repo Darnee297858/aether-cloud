@@ -1,23 +1,12 @@
-`"use client";
+'use client';
 
-import React, { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Sphere, MeshDistortMaterial, Float, Ring } from "@react-three/drei";
-import * as THREE from "three";
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Float, Sphere, MeshDistortMaterial, Ring } from '@react-three/drei';
 
 function CloudCoreNode() {
-  const meshRef = useRef<THREE.Mesh>(null!);
-
-  useFrame((_, delta) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x += delta * 0.2;
-      meshRef.current.rotation.y += delta * 0.3;
-    }
-  });
-
   return (
-    <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
-      <Sphere ref={meshRef} args={[1, 64, 64]} scale={2}>
+    <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
+      <Sphere args={[1, 64, 64]} scale={1.8}>
         <MeshDistortMaterial
           color="#00FF66"
           attach="material"
