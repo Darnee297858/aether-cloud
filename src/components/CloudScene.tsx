@@ -31,9 +31,9 @@ export default function CloudScene() {
     <div className="absolute inset-0 z-0 w-full h-full">
       <Canvas camera={{ position: [0, 0, 6], fov: 60 }}>
         <ambientLight intensity={0.8} />
-<directionalLight position={[3, 3, 3]} intensity={1.5} />
-<CloudCoreNode />
-<OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.0} />
+        <directionalLight position={[3, 3, 3]} intensity={1.5} />
+        <CloudCoreNode />
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.0} />
       </Canvas>
     </div>
   );
