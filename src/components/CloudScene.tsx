@@ -7,14 +7,7 @@ function CloudCoreNode() {
   return (
     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
       <Sphere args={[1, 64, 64]} scale={1.8}>
-        <MeshDistortMaterial
-          color="#00FF66"
-          attach="material"
-          distort={0.45}
-          speed={2.5}
-          roughness={0.1}
-          wireframe={true}
-        />
+        <MeshDistortMaterial color="#00FF66" attach="material" distort={0.45} speed={2.5} roughness={0.1} wireframe={true} />
       </Sphere>
       <Ring args={[2.8, 2.85, 64]} rotation={[Math.PI / 2, 0, 0]}>
         <meshBasicMaterial color="#00FF66" wireframe />
@@ -37,4 +30,4 @@ export default function CloudScene() {
       </Canvas>
     </div>
   );
-}
+      }
